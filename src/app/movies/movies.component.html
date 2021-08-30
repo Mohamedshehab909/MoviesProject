@@ -1,0 +1,15 @@
+
+
+<div class=" container">
+  <div class=" row py-5">
+ <div *ngFor = 'let movie of trendingMovies' class="col-md-2">
+  <a [routerLink]="['/moviedetails' , movie.id]">
+   <div class="movie my-2 position-relative">
+    <img class="w-100" [src]="imgPrefix+movie.poster_path" [alt]="movie.title">
+    <h3 class="h6 my-2">{{movie.title}}</h3>
+    <div class="vote">{{movie.vote_average}}</div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>

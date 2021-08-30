@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+$bgColore : #131722;
+$lightBgColore : #24baef ;
+$bgTransparent : rgba(36,186,239,.6);
+$fontColore: #fff ;
+$borderColore : #a8a8a83d ;
+$borderHeight : 1px ;
+$secondFontColore : #949cb0;
+
+
+body
+{
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: $bgColore;
+  color: $fontColore;
+}
+.logo
+{
+  color: red !important;
+  font-weight: 900 !important;
+  font-family: sans-serif;
+}
+.active
+{
+  background-color: tomato;
+  color: black !important;
+}
+a
+{
+  font-size: 18px;
+  color: $fontColore !important;
+  text-decoration: none;
+}
+a:hover
+{
+  font-size: 18px;
+  color: $fontColore;
+  text-decoration: none;
+}
+
+.brdr{
+  height: 1px;
+  background-color: $borderColore;
+}
+
+.secend_color
+{
+  color: $secondFontColore;
+}
+
+.vote
+{
+  background-color: $lightBgColore;
+  padding: 5px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.genres
+{
+  background-color: $lightBgColore;
+}
+
+.genresover
+{
+  color: $secondFontColore;
+}

@@ -1,0 +1,10 @@
+
+<div class=" container ">
+  <div class=" row py-5 mt-2">
+<div *ngFor = 'let person of trendingPeople' class="col-md-2">
+  <div class="movie my-2 ">
+   <img class="w-100" [src]="imgPrefix+person.profile_path" [alt]="person.name">
+   <h3 class="h6 my-2">{{person.name}}</h3>
+</div>
+</div>
+</div>

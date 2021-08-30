@@ -1,0 +1,20 @@
+
+<div class=" container py-5">
+  <div class="row py-4">
+    <div class="col-md-4">
+      <img class="w-100 movieimg" [src]="imgPrefix+movie?.poster_path">
+    </div>
+    <div class=" col-md-8 d-flex flex-column align-content-around">
+      <h3>{{movie?.title}}</h3>
+      <hr>
+      <ul class="d-flex list-unstyled my-2" >
+        <li *ngFor ="let g of movie?.genres" class="mx-2 genres p-2">{{g.name}}</li>
+      </ul>
+      <h5 class="my-md-3">vote : {{movie?.vote_average}}</h5>
+      <h5 class="my-md-3">vote_count : {{movie?.vote_count}}</h5>
+      <h5 class="my-md-3">release_date : {{movie?.release_date}}</h5>
+      <h5 class="my-md-3">popularity : {{movie?.popularity}}</h5>
+      <h3 class="genresover my-4">{{movie?.overview}}</h3>
+    </div>
+  </div>
+</div>

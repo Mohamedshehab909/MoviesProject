@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg fixed-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" routerLink="home">NetFlix</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" routerLink="about">About</a>
+        </li> -->
+        <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" routerLink="movies" routerLinkActive="active">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" routerLink="tv" routerLinkActive="active">TV</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" routerLink="network">Network</a>
+        </li> -->
+        <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" routerLink="people" routerLinkActive="active">People</a>
+        </li>
+
+      </ul>
+
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form> -->
+      <div class="social-midia mx-auto">
+        <i class="fab mx-2 fa-instagram"></i>
+        <i class="fab mx-2  fa-youtube"></i>
+        <i class="fab mx-2  fa-facebook"></i>
+        <i class="fab mx-2 fa-soundcloud"></i>
+        <i class="fab mx-2 fa-spotify"></i>
+        <i class="fab mx-2 fa-pinterest"></i>
+      </div>
+
+      <ul class="navbar-nav mr-auto ">
+
+        <li class="nav-item">
+          <a *ngIf='!isLogin' class="nav-link" routerLink="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf='!isLogin' class="nav-link" routerLink="register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf='isLogin' class="nav-link" (click) = "isLogout()" >Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

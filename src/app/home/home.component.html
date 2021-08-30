@@ -1,0 +1,65 @@
+
+<app-homeheader></app-homeheader>
+<div class=" container">
+  <div class=" row py-5">
+    <div class=" col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr w-25 mb-4"></div>
+      <h2>Trending Movies <br> To watch  Right Now</h2>
+      <p class="secend_color">Most watched Movies By Dayes</p>
+      <div class="brdr w-75 mt-4"></div>
+      </div>
+
+
+    </div>
+    <div *ngFor = 'let movie of trendingMovies' class="col-md-2">
+      <a [routerLink]="['/moviedetails' , movie.id]">
+       <div class="movie my-2 position-relative">
+        <img class="w-100" [src]="imgPrefix+movie.poster_path" [alt]="movie.title">
+        <h3 class="h6 my-2">{{movie.title}}</h3>
+        <div class="vote">{{movie.vote_average}}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+<hr>
+  <div class=" row py-5">
+    <div class=" col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr w-25 mb-4"></div>
+      <h2>Trending TV <br> To watch  Right Now</h2>
+      <p class="secend_color">Most watched TV By Dayes</p>
+      <div class="brdr w-75 mt-4"></div>
+      </div>
+
+
+    </div>
+    <div *ngFor = 'let tv of trendingtv' class="col-md-2">
+       <div class="movie my-2 position-relative">
+        <img class="w-100" [src]="imgPrefix+tv.poster_path" [alt]="tv.title">
+        <h3 class="h6 my-2">{{tv.name}}</h3>
+        <div class="vote">{{tv.vote_average}}</div>
+        </div>
+    </div>
+  </div>
+
+<hr>
+  <div class=" row py-5">
+    <div class=" col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr w-25 mb-4"></div>
+      <h2>Trending People <br>To watch  Right Now</h2>
+      <p class="secend_color">Most watched TV By Dayes</p>
+      <div class="brdr w-75 mt-4"></div>
+      </div>
+
+
+    </div>
+    <div *ngFor = 'let person of trendingPeople' class="col-md-2">
+       <div class="movie my-2 ">
+        <img class="w-100" [src]="imgPrefix+person.profile_path" [alt]="person.name">
+        <h3 class="h6 my-2">{{person.name}}</h3>
+    </div>
+  </div>
+
+</div>
